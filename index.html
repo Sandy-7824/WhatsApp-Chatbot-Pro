@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chatbot Pro | Automate Your Business with AI</title>
+    <meta name="description" content="Automate customer support, lead generation, and sales with AI-powered WhatsApp Chatbots. 24/7 automated support for your business.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Spinner -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="#demo" class="floating-whatsapp" aria-label="Try Live Demo">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Try Live Demo</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <span>WhatsApp <span class="accent-text">Chatbot Pro</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#demo" class="nav-link">Live Demo</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#industries" class="nav-link">Industries</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#pricing" class="btn btn-primary btn-nav">Get Started</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shape shape1"></div>
+        <div class="hero-bg-shape shape2"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <i class="fas fa-bolt"></i> Next-Gen AI Automation
+                </div>
+                <h1>Automate Your Business with <span class="gradient-text">AI WhatsApp Chatbots</span></h1>
+                <p>Engage customers, capture leads, qualify prospects, and drive sales 24/7 directly within the world's most popular messaging application.</p>
+                <div class="hero-ctas">
+                    <a href="#pricing" class="btn btn-primary btn-large">Get Started <i class="fas fa-chevron-right"></i></a>
+                    <a href="#demo" class="btn btn-secondary btn-large">Live Demo <i class="fas fa-play-circle"></i></a>
+                </div>
+                <div class="hero-trust">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span>Trusted by 5,000+ scaling brands worldwide</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-speaker"></div>
+                    <div class="phone-screen">
+                        <div class="mockup-header">
+                            <div class="user-avatar">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="user-info">
+                                <h3>Bot Assistant</h3>
+                                <span class="online-indicator">Online</span>
+                            </div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="chat-bubble received">
+                                <span>Hello! Welcome to WhatsApp Chatbot Pro. How can we help you scale today?</span>
+                                <span class="bubble-time">10:00 AM</span>
+                            </div>
+                            <div class="chat-bubble sent">
+                                <span>I want to automate customer support.</span>
+                                <span class="bubble-time">10:01 AM</span>
+                            </div>
+                            <div class="chat-bubble received">
+                                <span>Awesome! Our AI Bots handle up to 80% of support queries instantly. Would you like a live demo?</span>
+                                <span class="bubble-time">10:01 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-badge badge1"><i class="fas fa-check-circle"></i> 24/7 Automated</div>
+                <div class="floating-badge badge2"><i class="fas fa-chart-line"></i> 10x Lead Capture</div>
+                <div class="floating-badge badge3"><i class="fas fa-bolt"></i> Instant Reply</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section-padding" id="features">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Why Choose Us</span>
+                <h2>Cutting-Edge Features to Supercharge Sales</h2>
+                <p>Deploy conversational artificial intelligence that mimics your best sales reps and support agents.</p>
+            </div>
+            <div class="grid grid-4">
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>24/7 Customer Support</h3>
+                    <p>Provide instantaneous answers to FAQs outside standard business hours, keeping engagement levels high.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI-Powered Replies</h3>
+                    <p>Integrate robust NLP models that understand context, intent, and customer emotion for natural flows.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-language"></i></div>
+                    <h3>Multi-language Support</h3>
+                    <p>Detect user languages dynamically and translate answers seamlessly to assist globally.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-user-plus"></i></div>
+                    <h3>Lead Generation</h3>
+                    <p>Acquire high-quality leads, capture contact coordinates, and segment prospects cleanly inside your CRM.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h3>Order Tracking</h3>
+                    <p>Synchronize databases to delivery update messages on status, shipment tracking, and logistics easily.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Appointment Booking</h3>
+                    <p>Schedule consulting slots, make reservations, or confirm calendar invites automatically in seconds.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Broadcast Messages</h3>
+                    <p>Reach opting audiences through verified official notification campaigns with peak delivery metrics.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Monitor transaction volumes, user behavior patterns, feedback ratings, and query resolution metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works section-padding" id="how-it-works">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Simple Integration</span>
+                <h2>4 Steps to Automated Growth</h2>
+                <p>Establish automated, production-ready workflows in mere minutes with zero technical overhead.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Connect WhatsApp</h3>
+                        <p>Link your official Meta business account or configure our secure virtual numbers with a QR Scan.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Train Your Bot</h3>
+                        <p>Feed resources, FAQs, site links, or documents into our smart AI system to teach the chatbot.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Automate Conversations</h3>
+                        <p>Draft response loops, custom funnels, logic branching, and dynamic keyword-trigger criteria.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Grow Your Business</h3>
+                        <p>Watch standard inquiries settle automatically while your live team solves complex enterprise sales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Chat Section -->
+    <section class="demo-section section-padding" id="demo">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Try it live</span>
+                <h2>Interactive Demo Environment</h2>
+                <p>Converse with our simulated AI assistant to see how responsive keyword and query flows are processed.</p>
+            </div>
+            <div class="demo-wrapper">
+                <div class="demo-chat-container glass-card">
+                    <div class="demo-chat-header">
+                        <div class="chat-header-user">
+                            <div class="chat-header-avatar">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="chat-header-meta">
+                                <h3>WhatsApp Chatbot Pro</h3>
+                                <span class="status-indicator"><span class="dot"></span> Online</span>
+                            </div>
+                        </div>
+                        <div class="chat-header-actions">
+                            <i class="fas fa-phone-alt"></i>
+                            <i class="fas fa-video"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="demo-chat-messages" id="chatMessages">
+                        <div class="chat-date">TODAY</div>
+                        <div class="chat-bubble received">
+                            <span>Hello there! 👋 I am the WhatsApp Chatbot Pro AI helper. Click the buttons below or type an option to see what I can do:</span>
+                            <span class="bubble-time">Just Now</span>
+                        </div>
+                    </div>
+                    <div class="demo-chat-suggestions" id="chatSuggestions">
+                        <button class="suggestion-btn" data-text="Hello">👋 Say Hello</button>
+                        <button class="suggestion-btn" data-text="Services">💼 Services</button>
+                        <button class="suggestion-btn" data-text="Pricing">💳 Pricing Plans</button>
+                        <button class="suggestion-btn" data-text="Contact">📞 Contact Us</button>
+                        <button class="suggestion-btn" data-text="Help">💡 Help / Options</button>
+                    </div>
+                    <form class="demo-chat-input" id="chatForm">
+                        <input type="text" id="chatInput" placeholder="Type a message (e.g., Pricing, Services)..." autocomplete="off">
+                        <button type="submit" class="chat-send-btn" aria-label="Send Message"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing section-padding" id="pricing">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Simple Pricing</span>
+                <h2>Choose a Plan Fitted to Your Business</h2>
+                <p>Start small, and upgrade transparently as you scale customer communications.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p class="plan-desc">Best for local shops & freelancers</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">29</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 1 Active Phone Number</li>
+                        <li><i class="fas fa-check"></i> 1,000 Active Contacts</li>
+                        <li><i class="fas fa-check"></i> Basic Intent Training</li>
+                        <li><i class="fas fa-check"></i> Standard Rule Builder</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Multi-Language Support</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Advanced CRM Sync</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary btn-full">Choose Starter</a>
+                </div>
+                <div class="pricing-card glass-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Business</h3>
+                        <p class="plan-desc">Best for rapidly growing teams</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">79</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 3 Active Phone Numbers</li>
+                        <li><i class="fas fa-check"></i> 10,000 Active Contacts</li>
+                        <li><i class="fas fa-check"></i> AI Contextual Engine</li>
+                        <li><i class="fas fa-check"></i> Advanced Workflow Builder</li>
+                        <li><i class="fas fa-check"></i> Multi-Language Support</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Dedicated Agent Manager</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-full">Choose Business</a>
+                </div>
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p class="plan-desc">Designed for large corporate solutions</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">199</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited Active Numbers</li>
+                        <li><i class="fas fa-check"></i> Unlimited Active Contacts</li>
+                        <li><i class="fas fa-check"></i> Deep AI / Custom NLP API</li>
+                        <li><i class="fas fa-check"></i> Priority API Webhooks</li>
+                        <li><i class="fas fa-check"></i> Multi-Language Support</li>
+                        <li><i class="fas fa-check"></i> Dedicated Manager & SLA</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary btn-full">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries section-padding" id="industries">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Industry Solutions</span>
+                <h2>Engineered for Diverse Business Fields</h2>
+                <p>Our conversational solutions adapt specifically to your operating model and industry goals.</p>
+            </div>
+            <div class="grid grid-4">
+                <div class="industry-card glass-card">
+                    <div class="industry-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Education</h3>
+                    <p>Admissions pathways, instant fee deadlines, document delivery, and query support.</p>
+                </div>
+                <div class="industry-card glass-card">
+                    <div class="industry-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Healthcare</h3>
+                    <p>Patient bookings, automated checkup updates, custom medical reports, and FAQs.</p>
+                </div>
+                <div class="industry-card glass-card">
+                    <div class="industry-icon"><i class="fas fa-building"></i></div>
+                    <h3>Real Estate</h3>
+                    <p>Qualify property buyers, distribute catalogs, and request property walkthrough visits.</p>
+                </div>
+                <div class="industry-card glass-card">
+                    <div class="industry-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Restaurants</h3>
+                    <p>Show food menus, accept remote tables reservations, and track deliveries.</p>
+                </div>
+                <div class="industry-card glass-card">
+                    <div class="industry-icon"><i class="fas fa-shopping-bag"></i></div>
+                    <h3>E-commerce</h3>
+                    <p>Abandoned cart nudges, direct transactional support, tracking links, and coupons.</p>
+                </div>
+                <div class="industry-card glass-card">
+                    <div class="industry-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Finance</h3>
+                    <p>Provide secure balances, statements, check card requirements, and policy estimates.</p>
+                </div>
+                <div class="industry-card glass-card">
+                    <div class="industry-icon"><i class="fas fa-plane"></i></div>
+                    <h3>Travel</h3>
+                    <p>Deliver flight cards, hotel details, trip itineraries, and reservation status alerts.</p>
+                </div>
+                <div class="industry-card glass-card">
+                    <div class="industry-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Customer Support</h3>
+                    <p>Scale operational structures, triage support levels, and resolve routine problems instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner (Animated Counters) -->
+    <section class="stats-section section-padding">
+        <div class="container">
+            <div class="grid grid-4 text-center">
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="10000000">0</h3>
+                    <p class="stat-text">Conversations Automated</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="5000">0</h3>
+                    <p class="stat-text">Active Global Clients</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="99">0</h3>
+                    <p class="stat-text">Customer Satisfaction (%)</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="80">0</h3>
+                    <p class="stat-text">Support Cost Reduced (%)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Client Success</span>
+                <h2>What Happy Business Leaders Say</h2>
+                <p>Discover how teams leverage our automated WhatsApp bots to save hours weekly and close more deals.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="testimonial-card glass-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Using WhatsApp Chatbot Pro has transformed our response speeds. Over 75% of incoming user messages are resolved within 5 seconds."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sarah Jenkins" loading="lazy">
+                        </div>
+                        <div class="user-details">
+                            <h4>Sarah Jenkins</h4>
+                            <span>COO, FashionHub E-com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Our property pipeline quadrupled when we deployed automated catalog distributions. Highly recommended for any sales-focused team."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus Reynolds" loading="lazy">
+                        </div>
+                        <div class="user-details">
+                            <h4>Marcus Reynolds</h4>
+                            <span>VP Sales, Metro Realty</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"We cut our support personnel workload in half during rush hours. The booking flows are flawlessly integrated into our scheduling databases."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova" loading="lazy">
+                        </div>
+                        <div class="user-details">
+                            <h4>Elena Rostova</h4>
+                            <span>Founder, EduSphere Academy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section-padding" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Quick Answers</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Have questions about integration, pricing, or capabilities? Find answers below.</p>
+            </div>
+            <div class="faq-wrapper">
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Do I need a WhatsApp Business API account?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. We assist you directly in setting up the official WhatsApp Cloud API through your Meta Business Manager. This ensures your account remains compliant with WhatsApp's guidelines and prevents number suspension.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Can my human support agents takeover chats?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. The platform features an integrated live inbox interface. Whenever the chatbot receives a request that requires human attention or when a customer clicks "Talk to Agent", it routes the conversation seamlessly to your team.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Is my customer conversation data secure?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, security is our top priority. All communications are fully encrypted in transit. We are fully compliant with GDPR regulations, and we never resell or distribute any customer information or metadata.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Can I connect the chatbot with my CRMs?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer native, seamless integration options with major CRM and ticketing suites like HubSpot, Salesforce, Zoho, and Zapier, permitting frictionless lead updates and database synching.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Is there a setup fee for custom builds?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our standard packages feature self-service setup wizards. However, if your enterprise requires customized chatbot integrations, complex CRM flows, or personalized NLP tuning, our team can deliver a tailored setup for an additional fee.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container grid grid-2">
+            <div class="contact-info">
+                <span class="sub-title">Contact Support</span>
+                <h2>Let's Get Your WhatsApp Automations Configured</h2>
+                <p>Have questions or require assistance with custom workflow configurations? Fill out the form, and a WhatsApp automation specialist will reach out within 12 business hours.</p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>sales@whatsappchatbotpro.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 019-2834</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Headquarters</h4>
+                            <p>San Francisco, CA 94103</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container glass-card">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" required placeholder="name@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="business">Business Name</label>
+                        <input type="text" id="business" required placeholder="Your Company Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="4" required placeholder="Tell us about your automation needs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top grid grid-4">
+                <div class="footer-col brand-col">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span>WhatsApp <span class="accent-text">Chatbot Pro</span></span>
+                    </a>
+                    <p>Enabling businesses worldwide to capture real-time opportunities, support clients globally, and leverage conversational AI on WhatsApp.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#demo">Live Demo</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Industries</h3>
+                    <ul>
+                        <li><a href="#industries">Education</a></li>
+                        <li><a href="#industries">E-commerce</a></li>
+                        <li><a href="#industries">Healthcare</a></li>
+                        <li><a href="#industries">Real Estate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> support@whatsappchatbotpro.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 019-2834</p>
+                    <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WhatsApp Chatbot Pro. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
